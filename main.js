@@ -58,6 +58,15 @@ class Route {
         }
         return output;
     }
+
+    isInService() {
+        for (var period of this.schedule.servicePeriods) {
+            if (RouteSchedule.periodInService(period)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 class RouteSchedule {
@@ -209,10 +218,13 @@ class RouteCard {
             document.getElementById("route-card-template").content,
             true
         );
+        this.inService = route.isInService();
         this.root.firstElementChild.style.background = route.color;
         this.root.firstElementChild.href = route.link;
+        this.root.firstElementChild.classList.toggle("card--out-of-service", !this.inService);
         this.root.querySelector(".route-code").innerText = route.code;
         this.root.querySelector(".route-name").innerText = route.name;
+        this.root.querySelector(".service-info").innerText =  this.inService ? "Currently in service, " : "Currently not in service";
         this.chipSet = this.root.querySelector(".route-chip-set");
         for (var connection of route.connects) {
             var chip = document.createElement("span");
@@ -424,15 +436,13 @@ class StopGrid {
         console.log(sortedStops)
         var i= 0;
         for (var stop of sortedStops) {
-            if(i == 9){
-                break;
-            }
             console.log(stop);
             var stopInService = stop.periodsInService();
             for (var period of stopInService) {
+                if(i >= 9){
+                    break;
+                }
                 inService.push({ stop: stop, period: period });
-            }
-            if (stopInService.length != 0){
                 i++;
             }
         }
