@@ -1,0 +1,227 @@
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(white, #f3e2e5);
+  background-attachment:fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*[hidden]{
+  display:none !important;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto 0 auto;
+  padding: 30px;
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Neutraface", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.page-title {
+  color: #7a0019;
+  font-size: 3em;
+}
+
+@font-face {
+  font-family: "Neutraface";
+  src: url("neutra-b.woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Neutraface";
+  src: url("neutra-m.woff2");
+  font-weight: 400;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+
+.route-code {
+  font-size: 6em;
+  margin: -0.3em 0 -0.1em 0;
+}
+
+.card__main {
+  flex: 1;
+}
+
+.card__info svg {
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+.card__eta svg {
+  height: 0.5em;
+  vertical-align: top;
+  margin-right: -0.2em;
+  animation: 2s linear infinite alternate etaThrob;
+}
+
+@keyframes etaThrob {
+  0% {
+    filter: opacity(0.5);
+    transform: scale(0.9);
+  }
+  30% {
+    filter: opacity(1);
+    transform: scale(1);
+  }
+  100% {
+    filter: opacity(1);
+    transform: scale(1);
+  }
+}
+.card__eta h2 {
+  font-weight: 400;
+  font-size: 4em;
+  margin: -0.1em 0;
+}
+
+.card__main p, .card__eta p {
+  margin: 0;
+}
+
+.card--route svg * {
+  fill: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card-grid {
+  gap: 15px;
+}
+
+.card--route {
+  color: white;
+}
+
+.card--action {
+  transition: 0.15s;
+}
+
+.card--action:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+.card--action:active {
+  transform: scale(1);
+  box-shadow: none;
+  filter: brightness(0.9);
+}
+
+.chip {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  font-size: 0.75em;
+  border-radius: 10px;
+}
+
+.chip-set {
+  display: flex;
+  gap: 5px;
+}
+
+.route-name {
+  margin: 0;
+  margin-top: -0.8em;
+}
+
+.foot {
+  margin-top: 20px;
+  width: 100%;
+  text-align: end;
+}
+
+.eta:not(.eta--realtime) {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.eta:not(.eta--realtime) svg {
+  display: none;
+}
+
+.card__eta {
+  text-align: end;
+  max-width: max(20%, 100px);
+}/*# sourceMappingURL=style.css.map */
+
+.location-prompt{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  height: 100px;
+  width:100%;
+}
+
+.location-prompt button{
+  background-color: #7a0019;
+  color:white;
+  border:none;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.15s;
+  font-weight: bold;
+}
+
+.location-prompt button:hover{
+  background-color: #af314a;
+  box-shadow: 0px 3px 8px rgb(175, 49, 74, 0.5);
+  transform: scale(1.05);
+}
+
+.location-prompt button:active{
+  background-color: #640014;
+  transform: scale(0.95);
+}

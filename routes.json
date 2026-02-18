@@ -1,0 +1,190 @@
+[
+    {
+        "name": "East Bank Circulator",
+        "link": "//pts.umn.edu/transit/campus/east-bank-circulator-120",
+        "code": 120,
+        "schedule": [
+            {
+                "from": "7:00",
+                "to": "18:00",
+                "days": "MTWRF",
+                "freq": 20,
+                "routeId": 11324
+            }
+        ],
+        "connects": [
+            "svillage",
+            "ebank"
+        ],
+        "color": "#900021"
+    },
+    {
+        "name": "Campus Connector",
+        "code": 121,
+        "link": "//pts.umn.edu/transit/campus/campus-connector-121",
+        "schedule": [
+            {
+                "from": "8:00",
+                "to": "23:59",
+                "days": "US",
+                "freq": 25,
+                "routeId": 12591
+            },
+            {
+                "from": "7:00",
+                "to": "7:40",
+                "days": "MTWRF",
+                "freq": 10,
+                "routeId": 11278
+            },
+            {
+                "from": "7:40",
+                "to": "18:00",
+                "days": "MTWRF",
+                "freq": 5,
+                "routeId": 11278
+            },
+            {
+                "from": "18:00",
+                "to": "22:00",
+                "days": "MTWRF",
+                "freq": 15,
+                "routeId": 11278
+            },
+            {
+                "from": "22:00",
+                "to": "23:59",
+                "days": "MTWRF",
+                "freq": 20,
+                "routeId": 12591
+            }
+        ],
+        "connects": [
+            "svillage",
+            "ebank",
+            "wbank",
+            "spaul"
+        ],
+        "color": "#b97226"
+    },
+    {
+        "name": "University Avenue Circulator",
+        "code": 122,
+        "link" : "//pts.umn.edu/transit/campus/university-avenue-circulator-122",
+        "schedule": [
+            {
+                "from": "8:00",
+                "to": "23:59",
+                "days": "U",
+                "freq": 20,
+                "routeId": 12819
+            },
+            {
+                "from": "8:00",
+                "to": "2:00",
+                "days": "S",
+                "freq": 20,
+                "routeId": 12819
+            },
+            {
+                "from": "7:00",
+                "to": "11:40",
+                "days": "MTWRF",
+                "freq": 15,
+                "routeId": 11279
+            },
+            {
+                "from": "11:40",
+                "to": "18:00",
+                "days": "MTWRF",
+                "freq": 10,
+                "routeId": 11279
+            },
+            {
+                "from": "18:00",
+                "to": "23:59",
+                "days": "MTW",
+                "freq": 20,
+                "routeId": 12819
+            },
+            {
+                "from": "18:00",
+                "to": "2:00",
+                "days": "RF",
+                "freq": 10,
+                "routeId": 12819
+            }
+        ],
+        "connects": [
+            "svillage",
+            "ebank",
+            "wbank",
+            "dinky"
+        ],
+        "color": "#ceab11"
+    },
+    {
+        "name": "Fourth Street Circulator",
+        "code": 123,
+        "link": "//pts.umn.edu/transit/campus/fourth-street-circulator-123",
+        "schedule": [
+            {
+                "from": "7:00",
+                "to": "11:40",
+                "days": "MTWRF",
+                "freq": 10,
+                "routeId": 11280
+            },
+            {
+                "from": "11:40",
+                "to": "18:00",
+                "days": "MTWRF",
+                "freq": 15,
+                "routeId": 11280
+            }
+        ],
+        "connects": [
+            "ebank",
+            "wbank",
+            "dinky"
+        ],
+        "color": "#3f8d57"
+    },
+    {
+        "name": "Saint Paul Circulator",
+        "code": 124,
+        "link": "//pts.umn.edu/transit/campus/st-paul-circulator-124",
+        "schedule": [
+            {
+                "from": "7:00",
+                "to": "18:00",
+                "days": "MTWRF",
+                "freq": 20,
+                "routeId": 11281
+            }
+        ],
+        "connects": [
+            "spaul"
+        ],
+        "color": "#07188d"
+    },
+    {
+        "name": "Dinkytown Connector",
+        "code": 125,
+        "link": "https://pts.umn.edu/transit/campus/dinkytown-connector-125",
+        "schedule": [
+            {
+                "from": "7:10",
+                "to": "15:10",
+                "days": "MTWRF",
+                "freq": 15,
+                "routeId": 12527
+            }
+        ],
+        "connects": [
+            "dinky",
+            "wbank"
+        ],
+        "color": "#4c1f8d"
+    }
+]
