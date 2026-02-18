@@ -227,5 +227,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card--out-of-service {
-  filter: saturate(0.5);
+  filter: opacity(0.5) !important;
 }

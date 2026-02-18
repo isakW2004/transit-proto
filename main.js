@@ -224,7 +224,7 @@ class RouteCard {
         this.root.firstElementChild.classList.toggle("card--out-of-service", !this.inService);
         this.root.querySelector(".route-code").innerText = route.code;
         this.root.querySelector(".route-name").innerText = route.name;
-        this.root.querySelector(".service-info").innerText =  this.inService ? "Currently in service, " : "Currently not in service";
+        this.root.querySelector(".service-info").innerText =  this.inService ? "Currently in service, " : "Currently not in service, ";
         this.chipSet = this.root.querySelector(".route-chip-set");
         for (var connection of route.connects) {
             var chip = document.createElement("span");
